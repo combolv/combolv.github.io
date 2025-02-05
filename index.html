@@ -1,1 +1,48 @@
-This is Kangbo Lyu's homepage. Coming soon...
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        .nav { background: #333; padding: 10px; text-align: center; }
+        .nav a { color: white; text-decoration: none; padding: 10px 20px; display: inline-block; }
+        .nav a:hover { background: #575757; }
+        .content { padding: 20px; display: none; }
+        .active { display: block; }
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="#" onclick="showTab('intro')">My Intro</a>
+        <a href="#" onclick="showTab('publications')">My Publications</a>
+        <a href="#" onclick="showTab('cv')">My CV</a>
+        <a href="#" onclick="showTab('others')">Others</a>
+    </div>
+    
+    <div id="intro" class="content active">
+        <h2>Intro</h2>
+        <p>This is Kangbo Lyu's homepage. Coming soon...</p>
+    </div>
+    <div id="publications" class="content">
+        <h2>Publications</h2>
+        <p>Coming soon...</p>
+    </div>
+    <div id="cv" class="content">
+        <h2>CV</h2>
+        <p>Coming soon...</p>
+    </div>
+    <div id="others" class="content">
+        <h2>Others</h2>
+        <p>Comming soon</p>
+    </div>
+    
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.content').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
